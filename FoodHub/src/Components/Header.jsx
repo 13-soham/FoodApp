@@ -14,6 +14,7 @@ const Header = () => {
           <h2 className='text-m cursor-pointer'>About Us</h2>
           <h2 className='text-m cursor-pointer'>Contact Us</h2>
           <i className='ri-shopping-cart-line text-2xl cursor-pointer'></i>
+          
         </div>
       </div>
     </div>
