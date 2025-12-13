@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar but keep scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* for Internet Explorer */
+  scrollbar-width: none;     /* for Firefox */
+}
+
+.buttonProp {
+    padding: 10px 20px;
+    background-color: #386641;
+    color: #ffffff;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+    box-shadow: 0 4px 8px rgba(56, 102, 65, 0.25);
+}

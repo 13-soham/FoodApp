@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Components/Header';
+import Body from './Components/Body';
 
 
 
@@ -23,8 +24,9 @@ Planning →
 
 const App = () => {
   return (
-    <div>
+    <div className='min-h-screen px-7 py-3 bg-black'>
       <Header/>
+      <Body/>
     </div>
   )
 }
