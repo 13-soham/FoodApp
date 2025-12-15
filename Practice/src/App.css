@@ -26,3 +26,14 @@ html, body, #root {
     transition: 0.25s ease-in-out;
     box-shadow: 0 4px 8px rgba(56, 102, 65, 0.25);
 }
+
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-family: monument;
+  font-weight: 600;
+  white-space: nowrap;
+}
