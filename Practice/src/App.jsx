@@ -5,6 +5,11 @@ import Home from "./Pages/Home";
 import {Route, Routes} from "react-router-dom";
 import About from './Pages/About';
 import ContactUs from './Pages/ContactUs';
+import Exit from './Pages/Exit';
+import Section from './Pages/Section';
+import Veg from './Pages/Veg';
+import Conti from './Pages/Conti';
+import NonVeg from './Pages/NonVeg';
 
 
 
@@ -35,6 +40,12 @@ const App = () => {
         <Route path="/home" element={<Home />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<ContactUs />}/>
+        <Route path='/section' element={<Section />}>
+          <Route path='veg' element={<Veg/>}/>
+          <Route path='nonveg' element={<NonVeg/>}/>
+          <Route path='conti' element={<Conti/>}/>
+        </Route>
+        <Route path='*' element={<Exit/>}/>
       </Routes>
     </div>
   )

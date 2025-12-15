@@ -8,7 +8,7 @@ const Header = () => {
     <div className='text-white'>
       <div className='border-2 border-white px-5 py-2 flex items-center justify-between'>
         <div className='h-20 w-20 overflow-hidden flex items-center cursor-pointer'>
-          <img src={logo} alt='FoodHub logo' className='h-full w-auto object-contain' />
+          <Link to="/"><img src={logo} alt='FoodHub logo' className='h-full w-auto object-contain' /></Link>
         </div>
         <div className='flex items-center gap-5'>
 
@@ -16,7 +16,7 @@ const Header = () => {
           <h2 className='text-m cursor-pointer'><Link to="/about">About</Link></h2>
           <h2 className='text-m cursor-pointer'><Link to="/contact">Contact us</Link></h2>
 
-          <i className='ri-shopping-cart-line text-2xl cursor-pointer'></i>
+          <Link to="/section"><i className='ri-shopping-cart-line text-2xl cursor-pointer'></i></Link>
         </div>
       </div>
     </div>
