@@ -1,7 +1,7 @@
 import React from 'react'
 import 'remixicon/fonts/remixicon.css'
 import logo from '../Images/foodhub-high-resolution-logo-transparent.png'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 const Header = () => {
 
@@ -45,9 +45,19 @@ const Header = () => {
               Today's Menu
             </span>
           </div>
-          <h2 className='text-m cursor-pointer'><Link to="/home">Home</Link></h2>
-          <h2 className='text-m cursor-pointer'><Link to="/about">About</Link></h2>
-          <h2 className='text-m cursor-pointer'><Link to="/contact">Contact us</Link></h2>
+          <h2 className='text-m cursor-pointer'><NavLink style={(e)=>{
+            return{
+              color : e.isActive? "tomato" : "" 
+            };
+          }} to="/home">Home</NavLink></h2><h2 className='text-m cursor-pointer'><NavLink style={(e)=>{
+            return{
+              color : e.isActive? "tomato" : "" 
+            };
+          }} to="/about">About</NavLink></h2><h2 className='text-m cursor-pointer'><NavLink style={(e)=>{
+            return{
+              color : e.isActive? "tomato" : "" 
+            };
+          }} to="/contact">Contact us</NavLink></h2>
 
           <Link to="/section"><i className='ri-shopping-cart-line text-2xl cursor-pointer'></i></Link>
         </div>
