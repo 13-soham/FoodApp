@@ -21,8 +21,8 @@ const Header = () => {
     if (x >= 9 && x <= 10) navigate("/section/conti");
   }
   return (
-    <div className='text-white'>
-      <p className='text-2xl text-white'>{theme}</p>
+    <div className={theme === "light" ? "text-white" : "text-cyan-400"}>
+      {/* <p className='text-2xl text-white'>{theme}</p> */}
       <div className='border-2 border-white px-5 py-2 flex items-center justify-between'>
         <div className='h-20 w-20 overflow-hidden flex items-center cursor-pointer'>
           <Link to="/"><img src={logo} alt='FoodHub logo' className='h-full w-auto object-contain' /></Link>
