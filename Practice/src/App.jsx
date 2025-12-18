@@ -12,6 +12,7 @@ import Conti from './Pages/Conti';
 import NonVeg from './Pages/NonVeg';
 import Menu from './Pages/Menu';
 import Back from './Components/Back';
+// import { ToggleDataContext } from './context/ToggleContext';
 
 
 
@@ -59,6 +60,7 @@ const App = () => {
         <Route path='*' element={<Exit/>}/>
       </Routes>
     </div>
+
   )
 }
 

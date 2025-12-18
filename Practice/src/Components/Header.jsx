@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import 'remixicon/fonts/remixicon.css'
 import logo from '../Images/foodhub-high-resolution-logo-transparent.png'
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { ToggleDataContext } from '../context/ToggleContext';
 
 const Header = () => {
+
+  const {theme, setTheme} = useContext(ToggleDataContext);
+
+  function changeToggle(){
+    if(theme === "light") setTheme("dark");
+    if(theme === "dark") setTheme("light");
+  }
 
   const navigate = useNavigate();
   function menu() {
@@ -14,12 +22,14 @@ const Header = () => {
   }
   return (
     <div className='text-white'>
+      <p className='text-2xl text-white'>{theme}</p>
       <div className='border-2 border-white px-5 py-2 flex items-center justify-between'>
         <div className='h-20 w-20 overflow-hidden flex items-center cursor-pointer'>
           <Link to="/"><img src={logo} alt='FoodHub logo' className='h-full w-auto object-contain' /></Link>
         </div>
         <div className='flex items-center gap-5'>
 
+          <i onClick={changeToggle} className="ri-sun-line cursor-pointer text-xl"></i>
           <div className="relative group cursor-pointer">
             <i
               onClick={menu}
